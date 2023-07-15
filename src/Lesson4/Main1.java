@@ -11,7 +11,7 @@ public class Main1 {
         List<Integer> numbers = generateRandomNambers(10,1,10);
         System.out.println(numbers);
         System.out.println(calculateSum(numbers));
-        System.out.println(calculateSumiterator(numbers));
+        System.out.println(calculateSumIterator(numbers));
     }
 
     public static List<Integer> generateRandomNambers (int count,int min, int max) {
@@ -33,7 +33,7 @@ public class Main1 {
         return sum;
     }
 
-    public static int calculateSumiterator(List<Integer> numbers) {
+    public static int calculateSumIterator(List<Integer> numbers) {
         int sum = 0;
         Iterator<Integer> iterator = numbers.iterator();
 
