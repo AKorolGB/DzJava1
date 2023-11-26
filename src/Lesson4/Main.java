@@ -4,7 +4,7 @@ package Lesson4;
 //        Постараться не обращаться к листу по индексам.
 import java.util.LinkedList;
 
-public class Main {
+public class  Main {
     public static void main(String[] args) {
         LinkedList<String> list = new LinkedList<>();
           list.add("Понедельник");
@@ -22,6 +22,7 @@ public class Main {
         }
         System.out.println(list2);
     }
+
 
 
 }

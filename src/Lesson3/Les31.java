@@ -23,13 +23,15 @@ public class Les31 {
         return numbers;
     }
     public static List<Integer>   removeEvenNumbers(List<Integer> numbers){
-        List<Integer> nambersRemove = new ArrayList<>();
-        for (Integer number: numbers){
-            if (number % 2 != 0){
-                nambersRemove.add(number);
+//        List<Integer> nambersRemove = new ArrayList<>();
+        for (int i = 0; i <numbers.size() ; i++) {
+            if (numbers.get(i) % 2 == 0){
+                numbers.remove(i);
+                i--;
+
             }
         }
-        return nambersRemove ;
+        return numbers ;
     }
     
 }

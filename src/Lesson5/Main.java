@@ -1,9 +1,7 @@
 package Lesson5;
-//Реализуйте структуру телефонной книги с помощью HashMap, учитывая, что 1 человек может иметь несколько телефонов.
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+//Реализуйте структуру телефонной книги с помощью HashMap, у
+// читывая, что 1 человек может иметь несколько телефонов.
+import java.util.*;
 
 public class Main {
 
@@ -38,7 +36,9 @@ public class Main {
         addPhone(phoneBook, "Анна", "333333333");
         addPhone(phoneBook, "Ольга", "131561651");
         addPhone(phoneBook, "Павел", "165181656");
-        System.out.println(phoneBook);
+        System.out.println(phoneBook.containsKey("Анна"));
+
+        poisk(phoneBook);
     }
 
     public static void addPhone(Map<String, List<String>> phoneBook, String name, String phoneNumber) {
@@ -46,6 +46,23 @@ public class Main {
             phoneBook.put(name, new ArrayList<>());
         }
         phoneBook.get(name).add(phoneNumber);
+    }
+
+    public static void poisk(Map<String, List<String>> phoneBook ){
+        Scanner iSkaner = new Scanner(System.in);
+        System.out.println("Vvvedite imia ");
+        String imia = iSkaner.nextLine();
+        for (String key: phoneBook.keySet()) {
+            if(phoneBook.containsKey(key) == true){
+                System.out.println(phoneBook.get(key));
+                break;
+            }
+
+
+
+            
+        }
+
     }
 
 }
